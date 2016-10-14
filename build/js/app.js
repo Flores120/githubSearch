@@ -3,14 +3,13 @@ exports.apiKey = "b39207005a23e54f016a20d706ad10f551e49024";
 
 },{}],2:[function(require,module,exports){
 function Search(){
-  debugger;
    $.get('https://api.github.com/search/users'+ "?q=" + results).then(function(response){
-   console.log(response.items[1].login);
  });
  }
- Search.prototype.getlist = function () {
+ Search.prototype.getlist = function (list) {
+   var input = [];
    for (var i = 0; i < response.items.length; i++) {
-     array[i]
+    input.push(response.items[i].login);
    }
  };
 
@@ -24,6 +23,9 @@ $(document).ready(function(){
   $('#search').submit(function(event){
     event.preventDefault();
     var results = $('#searchInput').val();
+    var list = new Search;
+    var output = list.getlist(list);
+    console.log(ouput);
     $('.results').text("Here are your results " + results);
   });
 });
