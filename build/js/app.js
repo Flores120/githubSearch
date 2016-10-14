@@ -4,17 +4,19 @@ exports.apiKey = "b39207005a23e54f016a20d706ad10f551e49024";
 },{}],2:[function(require,module,exports){
 var apiKey = require('./../.env').apiKey;
 
-function Search(list){
-  var input = [];
-  var results = $('#searchInput').val();
-  $.get('https://api.github.com/search/users'+ "?q=" + results).then(function(response){
-    });
- }
+function Search(){
 
+}
  Search.prototype.getlist = function(results) {
+   var input = [];
+   $.get('https://api.github.com/search/users'+ "?q=" + results).then(function(response){
    for (var i = 0; i < response.items.length; i++) {
     input.push(response.items[i].login);
    }
+      input.forEach(function(input){
+      $('.results').append("<ul>" + input + "</ul>" );
+    });
+});
 };
 
 exports.searchModule = Search;
@@ -26,9 +28,10 @@ var Search = require('./../js/github.js').searchModule;
 $(document).ready(function(){
   $('#search').submit(function(event){
     event.preventDefault();
+    var results = $('#searchInput').val();
     var list = new Search();
-    var output = list.getlist();
-    console.log(output);
+    list.getlist(results);
+     $('.results').text("Here are your results " + results);
  });
 });
 

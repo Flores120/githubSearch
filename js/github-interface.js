@@ -4,9 +4,10 @@ var Search = require('./../js/github.js').searchModule;
 $(document).ready(function(){
   $('#search').submit(function(event){
     event.preventDefault();
+    var results = $('#searchInput').val();
     var list = new Search();
-    var output = list.getlist();
-    console.log(output);
+    list.getlist(results);
+     $('.results').text("Here are your results " + results);
  });
 });
 
