@@ -2,32 +2,49 @@
 exports.apiKey = "b39207005a23e54f016a20d706ad10f551e49024";
 
 },{}],2:[function(require,module,exports){
-function Search(){
-   $.get('https://api.github.com/search/users'+ "?q=" + results).then(function(response){
- });
+var apiKey = require('./../.env').apiKey;
+
+function Search(list){
+  var input = [];
+  var results = $('#searchInput').val();
+  $.get('https://api.github.com/search/users'+ "?q=" + results).then(function(response){
+    });
  }
- Search.prototype.getlist = function (list) {
-   var input = [];
+
+ Search.prototype.getlist = function(results) {
    for (var i = 0; i < response.items.length; i++) {
     input.push(response.items[i].login);
    }
- };
+};
 
 exports.searchModule = Search;
 
-},{}],3:[function(require,module,exports){
+},{"./../.env":1}],3:[function(require,module,exports){
 var apiKey = require('./../.env').apiKey;
 var Search = require('./../js/github.js').searchModule;
 
 $(document).ready(function(){
   $('#search').submit(function(event){
     event.preventDefault();
-    var results = $('#searchInput').val();
-    var list = new Search;
-    var output = list.getlist(list);
-    console.log(ouput);
-    $('.results').text("Here are your results " + results);
-  });
+    var list = new Search();
+    var output = list.getlist();
+    console.log(output);
+ });
 });
+
+
+
+
+//  $('.results').text("Here are your results " + results);
+
+//    input.forEach(function(input){
+//    $('.results').append("<ul>" + input + "</ul>" );
+//  });
+
+// $.get('https://api.github.com/search/users'+ "?q=" + results).then(function(response){
+//   var input = [];
+//   for (var i = 0; i < response.items.length; i++) {
+//    input.push(response.items[i].login);
+//  }
 
 },{"./../.env":1,"./../js/github.js":2}]},{},[3]);
