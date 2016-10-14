@@ -8,7 +8,7 @@ $(document).ready(function(){
     var list = new Search();
     list.getlist(results);
      $('.results').text("Here are your results " + results);
- });
+  });
 });
 
 
