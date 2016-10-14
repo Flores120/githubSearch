@@ -1,8 +1,8 @@
 # _GitHub Search_
 
-#### _{site that lets you search for people on github}_
+#### _site that lets you search for people on github_
 
-#### By _**{Alvaro Flores}**_
+#### By _**Alvaro Flores**_
 
 ## Description
 
