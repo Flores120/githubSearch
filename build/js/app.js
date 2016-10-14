@@ -2,13 +2,19 @@
 exports.apiKey = "b39207005a23e54f016a20d706ad10f551e49024";
 
 },{}],2:[function(require,module,exports){
-// function Search(){
-//  for (var i = 0; i < array.length; i++) {
-//    array[i]
-//  }
-// }
+function Search(){
+  debugger;
+   $.get('https://api.github.com/search/users'+ "?q=" + results).then(function(response){
+   console.log(response.items[1].login);
+ });
+ }
+ Search.prototype.getlist = function () {
+   for (var i = 0; i < response.items.length; i++) {
+     array[i]
+   }
+ };
 
-// exports.searchModule = Search;
+exports.searchModule = Search;
 
 },{}],3:[function(require,module,exports){
 var apiKey = require('./../.env').apiKey;
@@ -18,9 +24,6 @@ $(document).ready(function(){
   $('#search').submit(function(event){
     event.preventDefault();
     var results = $('#searchInput').val();
-    $.get('https://api.github.com/search/users?/'+ results + '/access_token='  + apiKey).then(function(response){
-    console.log(response);
-  });
     $('.results').text("Here are your results " + results);
   });
 });
