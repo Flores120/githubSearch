@@ -1,4 +1,4 @@
-# _{GitHub Search}_
+# _GitHub Search_
 
 #### _{site that lets you search for people on github}_
 
@@ -6,7 +6,7 @@
 
 ## Description
 
-_{This site lets search for people's usersnames and names and it outputs a list of usernames and a small description as well as their repositories}_
+This site lets search for people's usersnames and names and it outputs a list of usernames and a small description as well as their repositories_
 
 ## Setup/Installation Requirements
 
@@ -16,23 +16,23 @@ _{This site lets search for people's usersnames and names and it outputs a list 
 
 ## Known Bugs
 
-_{Currently there are no bugs}_
+_Currently there are no bugs_
 
 ## Support and contact details
 
-_{If there are any bugs please contact me and i will get on it as soon as possible}_
+_If there are any bugs please contact me and i will get on it as soon as possible_
 
 ## Technologies Used
 
-_{HTML}_
-_{CSS}_
-_{BootStrap}_
-_{JQuery}_
-_{Node}_
-_{JavaScript}_
+_HTML_
+_CS}_
+_BootStra}_
+_JQuer}_
+_Nod}_
+_JavaScrip}_
 
 ### License
-_{MIT}_
+_MI}_
 
 
-Copyright (c) 2016 **_{Alvaro Flores @Epicodus}_**
+Copyright (c) 2016 **_Alvaro Flores @Epicodus_**
