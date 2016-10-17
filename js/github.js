@@ -7,15 +7,9 @@ function Search(){
 Search.prototype.getlist = function(results) {
   var userName = [];
   $.get('https://api.github.com/search/users' + "?q=" + results).then(function(response){
-    if (userName === 0) {
-      alert('enter a name please')
-    }
-    else {
     for (var i = 0; i < response.items.length; i++) {
        userName.push(response.items[i].login);
-    console.log(response.items[i].login);
   }
-}
       $('#results').text("Here are your usernames " + results);
       userName.forEach(function(userName){
       $('#results').append("<li>" + userName + "</li>");
@@ -29,7 +23,8 @@ Search.prototype.getRep = function(results2) {
   for (var i = 0; i < response.length; i++) {
    input.push(response[i].full_name);
    input.push(response[i].description);
-   console.log(response[i].description);
+   console.log(response);
+
   }
      $('#results2').text("Here are your results " + results2);
      input.forEach(function(input){
