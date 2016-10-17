@@ -1,13 +1,17 @@
 var apiKey = require('./../.env').apiKey;
 var Search = require('./../js/github.js').searchModule;
+var list = new Search();
 
 $(document).ready(function(){
   $('#search').submit(function(event){
     event.preventDefault();
     var results = $('#searchInput').val();
-    var list = new Search();
     list.getlist(results);
-     $('.results').text("Here are your results " + results);
+});
+  $('#search2').submit(function(event){
+    event.preventDefault();
+    var results2 = $('#searchInput2').val();
+    list.getRep(results2);
   });
 });
 
