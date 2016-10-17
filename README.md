@@ -24,15 +24,15 @@ _If there are any bugs please contact me and i will get on it as soon as possibl
 
 ## Technologies Used
 
-_HTML_
-_CS}_
-_BootStra}_
-_JQuer}_
-_Nod}_
-_JavaScrip}_
+_HTM_
+_CSS_
+_BootStra_
+_JQuer_
+_Nod_
+_JavaScript_
 
 ### License
-_MI}_
+_MIT_
 
 
 Copyright (c) 2016 **_Alvaro Flores @Epicodus_**
